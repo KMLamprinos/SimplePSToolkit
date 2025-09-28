@@ -1,4 +1,4 @@
-# PSToolKit
+# SimplePSToolKit
 
  A simple Powershell script manager aiming to simplify our scripting daily routines,<br>
  using Out-GridView as GUI. 
