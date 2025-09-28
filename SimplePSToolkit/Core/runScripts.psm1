@@ -17,7 +17,7 @@ If((test-path "c:\temp") -eq $false){
     New-item -Path "C:\Temp" -ItemType Directory ; write-host " Directory C:\Temp created. "}else{
     Write-host " Directory C:\Temp found "
 }
-$choice  = ($toexec |Select-Object Name , Description , Path ) | Out-GridView -OutputMode Multiple -Title "SimpleToolkit"
+$choice  = ($toexec |Select-Object Name , Description , Path ) | Out-GridView -OutputMode Multiple -Title "SimplePSToolkit"
 try{
 $exec = $choice.path | ForEach-Object{$_+"\"+($choice.name.split("\")[-1])}}catch{Write-Host " No choice made by the user . Exiting " -ForegroundColor Black -BackgroundColor Gray}
 Write-Host $exec -ForegroundColor White -BackgroundColor Green
